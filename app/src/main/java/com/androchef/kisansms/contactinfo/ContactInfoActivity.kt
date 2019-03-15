@@ -10,6 +10,7 @@ import com.androchef.kisansms.R
 import com.androchef.kisansms.Utils
 import com.androchef.kisansms.databinding.ActivityContactInfoBinding
 import com.androchef.kisansms.pojo.Contact
+import com.androchef.kisansms.sendmessage.SendMessageDialogFragment
 
 class ContactInfoActivity : AppCompatActivity() {
 
@@ -35,6 +36,18 @@ class ContactInfoActivity : AppCompatActivity() {
         dataBinding.backImg.setOnClickListener {
             onBackPressed()
         }
+
+        dataBinding.btnSendMessage.setOnClickListener {
+            showSendMessageDialog()
+        }
+    }
+
+    private fun showSendMessageDialog() {
+        val sendMessageDialog = SendMessageDialogFragment()
+        val bundle = Bundle()
+        bundle.putSerializable(SendMessageDialogFragment.CONTACT_KEY,intent.getSerializableExtra(CONTACT_KEY) as Contact)
+        sendMessageDialog.arguments = bundle
+        sendMessageDialog.show(supportFragmentManager,null)
     }
 
     private fun handleIntentData() {

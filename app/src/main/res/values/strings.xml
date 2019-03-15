@@ -10,4 +10,8 @@
     <string name="company">Company</string>
     <string name="email">Email</string>
     <string name="phone_number">Phone Number</string>
+    <string name="send">SEND</string>
+    <string name="sms">SMS</string>
+    <string name="sending_to">Sending to :</string>
+    <string name="hi_your_verification_code_is">Hi , Your Verification Code is</string>
 </resources>
