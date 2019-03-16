@@ -14,4 +14,6 @@
     <string name="sms">SMS</string>
     <string name="sending_to">Sending to :</string>
     <string name="hi_your_verification_code_is">Hi , Your Verification Code is</string>
+    <string name="phone">Phone :</string>
+    <string name="otp">OTP :</string>
 </resources>

@@ -11,6 +11,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+
+
         <activity android:name=".contactinfo.ContactInfoActivity">
         </activity>
         <activity android:name=".MainActivity">

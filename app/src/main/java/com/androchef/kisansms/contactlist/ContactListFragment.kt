@@ -21,12 +21,21 @@ class ContactListFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         databinding = DataBindingUtil.inflate(inflater,R.layout.fragment_contact_list, container, false)
         init()
+        setRefreshSwipeListener()
         return databinding.root
     }
 
     private fun init() {
        databinding.contactRecyclerView.layoutManager = LinearLayoutManager(activity)
         databinding.contactRecyclerView.adapter = ContactListAdapter(Utils.getDummyContacts(activity!!))
+    }
+
+
+    private fun setRefreshSwipeListener(){
+        databinding.swipeRefreshContacts.setOnRefreshListener {
+            init()
+            databinding.swipeRefreshContacts.isRefreshing = false
+        }
     }
 
 

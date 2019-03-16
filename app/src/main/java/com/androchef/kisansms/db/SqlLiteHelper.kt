@@ -43,6 +43,7 @@ class SqlLiteHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
             + KEY_ID + " INTEGER PRIMARY KEY, "
             + KEY_TIME + " LONG, "
             + KEY_OTP + " TEXT, "
+            + KEY_USER_NAME + " TEXT, "
             + KEY_USER_PHONE + " TEXT"
             + " ) ")
 
