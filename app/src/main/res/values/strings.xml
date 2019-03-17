@@ -16,6 +16,7 @@
     <string name="otp">OTP :</string>
     <string name="no_internet">No Internet..</string>
     <string name="your_verification_code">Hi , Your Verification Code is </string>
-    <string name="text_local_api">Vw+khaJlC0o-gxZj8WxXKgAFuQOwdUrayYVPnNTbOW</string>
+    <!--//Change With Your Text Local API-->
+    <string name="text_local_api">Enter Your TextLocalAPI HERE</string>
     <string name="pull_from_up_to_refresh">Pull from up to Refresh</string>
 </resources>
