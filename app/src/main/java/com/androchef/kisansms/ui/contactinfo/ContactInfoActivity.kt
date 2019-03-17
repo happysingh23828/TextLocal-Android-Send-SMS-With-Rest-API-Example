@@ -1,4 +1,4 @@
-package com.androchef.kisansms.contactinfo
+package com.androchef.kisansms.ui.contactinfo
 
 import android.content.Context
 import android.content.Intent
@@ -9,8 +9,8 @@ import android.support.v7.app.AppCompatActivity
 import com.androchef.kisansms.R
 import com.androchef.kisansms.Utils
 import com.androchef.kisansms.databinding.ActivityContactInfoBinding
-import com.androchef.kisansms.pojo.Contact
-import com.androchef.kisansms.sendmessage.SendMessageDialogFragment
+import com.androchef.kisansms.pojo.response.Contact
+import com.androchef.kisansms.ui.sendmessage.SendMessageDialogFragment
 
 class ContactInfoActivity : AppCompatActivity() {
 
@@ -32,6 +32,18 @@ class ContactInfoActivity : AppCompatActivity() {
         onClicks()
     }
 
+
+    private fun init() {
+        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_contact_info)
+    }
+
+
+    private fun handleIntentData() {
+        intent?.let {
+            setDataToDisplay(intent.getSerializableExtra(CONTACT_KEY) as Contact)
+        }
+    }
+
     private fun onClicks() {
         dataBinding.backImg.setOnClickListener {
             onBackPressed()
@@ -48,12 +60,6 @@ class ContactInfoActivity : AppCompatActivity() {
         bundle.putSerializable(SendMessageDialogFragment.CONTACT_KEY,intent.getSerializableExtra(CONTACT_KEY) as Contact)
         sendMessageDialog.arguments = bundle
         sendMessageDialog.show(supportFragmentManager,null)
-    }
-
-    private fun handleIntentData() {
-        intent?.let {
-            setDataToDisplay(intent.getSerializableExtra(CONTACT_KEY) as Contact)
-        }
     }
 
     private fun setDataToDisplay(contact: Contact) {
@@ -73,7 +79,4 @@ class ContactInfoActivity : AppCompatActivity() {
         }
     }
 
-    private fun init() {
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_contact_info)
-    }
 }

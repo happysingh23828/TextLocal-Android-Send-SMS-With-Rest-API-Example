@@ -1,4 +1,4 @@
-package com.androchef.kisansms.sendmessage
+package com.androchef.kisansms.ui.sendmessage
 
 data class SendMessageDialogState(
     var loading : Boolean = false,

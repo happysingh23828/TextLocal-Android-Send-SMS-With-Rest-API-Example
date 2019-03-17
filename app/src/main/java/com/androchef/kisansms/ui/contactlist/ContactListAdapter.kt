@@ -1,4 +1,4 @@
-package com.androchef.kisansms.contactlist
+package com.androchef.kisansms.ui.contactlist
 
 import android.os.Build
 import android.support.v7.widget.RecyclerView
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.androchef.kisansms.R
 import com.androchef.kisansms.Utils
-import com.androchef.kisansms.contactinfo.ContactInfoActivity
-import com.androchef.kisansms.pojo.Contact
+import com.androchef.kisansms.ui.contactinfo.ContactInfoActivity
+import com.androchef.kisansms.pojo.response.Contact
 import kotlinx.android.synthetic.main.layout_item_contact.view.*
 
 class ContactListAdapter(var contactsList : List<Contact>) : RecyclerView.Adapter<ContactListAdapter.ContactListViewHolder>()  {

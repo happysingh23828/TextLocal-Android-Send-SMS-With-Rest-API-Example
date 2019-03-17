@@ -1,4 +1,4 @@
-package com.androchef.kisansms.pojo.post
+package com.androchef.kisansms.pojo.request
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,4 +1,4 @@
-package com.androchef.kisansms.sentmessageslist
+package com.androchef.kisansms.ui.sentmessageslist
 
 
 import android.databinding.DataBindingUtil

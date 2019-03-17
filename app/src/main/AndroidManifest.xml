@@ -15,9 +15,9 @@
             tools:ignore="GoogleAppIndexingWarning">
 
 
-        <activity android:name=".contactinfo.ContactInfoActivity">
+        <activity android:name="com.androchef.kisansms.ui.contactinfo.ContactInfoActivity">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

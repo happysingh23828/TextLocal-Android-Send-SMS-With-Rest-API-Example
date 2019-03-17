@@ -9,7 +9,7 @@
         <import type="android.view.View"/>
         <variable
                 name="state"
-                type="com.androchef.kisansms.sendmessage.SendMessageDialogState"/>
+                type="com.androchef.kisansms.ui.sendmessage.SendMessageDialogState"/>
     </data>
 
     <RelativeLayout

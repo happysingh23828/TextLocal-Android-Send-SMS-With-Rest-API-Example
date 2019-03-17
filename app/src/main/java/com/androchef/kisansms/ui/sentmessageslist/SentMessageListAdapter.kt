@@ -1,11 +1,11 @@
-package com.androchef.kisansms.sentmessageslist
+package com.androchef.kisansms.ui.sentmessageslist
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.androchef.kisansms.R
-import com.androchef.kisansms.pojo.Message
+import com.androchef.kisansms.pojo.response.Message
 import kotlinx.android.synthetic.main.layout_item_message.view.*
 import java.sql.Timestamp
 import java.text.SimpleDateFormat

@@ -1,4 +1,4 @@
-package com.androchef.kisansms.contactlist
+package com.androchef.kisansms.ui.contactlist
 
 
 import android.databinding.DataBindingUtil

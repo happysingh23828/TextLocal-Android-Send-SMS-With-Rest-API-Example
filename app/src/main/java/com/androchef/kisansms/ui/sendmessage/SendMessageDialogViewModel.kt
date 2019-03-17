@@ -1,7 +1,7 @@
-package com.androchef.kisansms.sendmessage
+package com.androchef.kisansms.ui.sendmessage
 
 import android.arch.lifecycle.ViewModel
-import com.androchef.kisansms.pojo.post.PostTextLocalSMSData
+import com.androchef.kisansms.pojo.request.PostTextLocalSMSData
 import com.androchef.kisansms.pojo.response.TextLocalSMSRespose
 import com.androchef.kisansms.retrofit.APIUtils
 import io.reactivex.Observable
@@ -45,10 +45,10 @@ class SendMessageDialogViewModel : ViewModel() {
 
     private fun getHashMapFromPojo(postTextLocalSMSData: PostTextLocalSMSData): HashMap<String, Any> {
         val map = HashMap<String, Any>()
-        map["apiKey"] = postTextLocalSMSData.apiKey!!
-        map["numbers"] = postTextLocalSMSData.numbers!!
-        map["test"] = postTextLocalSMSData.test!!
-        map["message"] = postTextLocalSMSData.message!!
+        map[API_KEY] = postTextLocalSMSData.apiKey!!
+        map[NUMBERS] = postTextLocalSMSData.numbers!!
+        map[TEST] = postTextLocalSMSData.test!!
+        map[MESSAGE] = postTextLocalSMSData.message!!
         return map
     }
 
@@ -58,6 +58,14 @@ class SendMessageDialogViewModel : ViewModel() {
         } else {
             throw NullPointerException("stateEmitter is null")
         }
+    }
+
+
+    companion object {
+        private const val API_KEY = "apiKey"
+        private const val NUMBERS = "numbers"
+        private const val TEST = "test"
+        private const val MESSAGE = "message"
     }
 
 

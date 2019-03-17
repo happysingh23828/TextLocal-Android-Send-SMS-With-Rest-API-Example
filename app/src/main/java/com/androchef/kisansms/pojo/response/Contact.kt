@@ -1,4 +1,4 @@
-package com.androchef.kisansms.pojo
+package com.androchef.kisansms.pojo.response
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

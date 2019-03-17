@@ -1,13 +1,14 @@
-package com.androchef.kisansms
+package com.androchef.kisansms.ui
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentStatePagerAdapter
 import android.support.v7.app.AppCompatActivity
-import com.androchef.kisansms.contactlist.ContactListFragment
+import com.androchef.kisansms.R
+import com.androchef.kisansms.ui.contactlist.ContactListFragment
 import com.androchef.kisansms.databinding.ActivityMainBinding
-import com.androchef.kisansms.sentmessageslist.SentMessagesListFragment
+import com.androchef.kisansms.ui.sentmessageslist.SentMessagesListFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun init() {
-        databinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        databinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
     }
 
     private fun setViewPager() {
@@ -46,9 +47,9 @@ class MainActivity : AppCompatActivity() {
 
         override fun getPageTitle(position: Int): CharSequence? {
             return when(position){
-                0 -> "Contacts"
-                1 -> "Messages"
-                else -> "Contacts"
+                0 -> getString(R.string.contacts)
+                1 -> getString(R.string.messages)
+                else -> getString(R.string.contacts)
             }
         }
     }

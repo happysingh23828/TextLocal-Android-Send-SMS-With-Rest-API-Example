@@ -1,4 +1,4 @@
-package com.androchef.kisansms.sendmessage
+package com.androchef.kisansms.ui.sendmessage
 
 import android.annotation.SuppressLint
 import android.arch.lifecycle.ViewModelProviders
@@ -15,9 +15,9 @@ import android.widget.Toast
 import com.androchef.kisansms.R
 import com.androchef.kisansms.databinding.LayoutFragmentSendMessageDialogBinding
 import com.androchef.kisansms.db.SqlLiteHelper
-import com.androchef.kisansms.pojo.Contact
-import com.androchef.kisansms.pojo.Message
-import com.androchef.kisansms.pojo.post.PostTextLocalSMSData
+import com.androchef.kisansms.pojo.response.Contact
+import com.androchef.kisansms.pojo.response.Message
+import com.androchef.kisansms.pojo.request.PostTextLocalSMSData
 import kotlinx.android.synthetic.main.layout_fragment_send_message_dialog.*
 import kotlin.random.Random
 

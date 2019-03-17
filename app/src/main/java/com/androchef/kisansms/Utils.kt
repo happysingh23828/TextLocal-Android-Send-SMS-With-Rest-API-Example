@@ -3,7 +3,7 @@ package com.androchef.kisansms
 import android.content.Context
 import android.content.res.ColorStateList
 import android.support.v4.content.ContextCompat
-import com.androchef.kisansms.pojo.Contact
+import com.androchef.kisansms.pojo.response.Contact
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
