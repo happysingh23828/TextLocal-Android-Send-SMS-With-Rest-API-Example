@@ -27,6 +27,7 @@ class SentMessagesListFragment : Fragment() {
     private fun init() {
         dataBinding.messagesRecyclerView.layoutManager = LinearLayoutManager(activity)
         dataBinding.messagesRecyclerView.adapter = SentMessageListAdapter(SqlLiteHelper(activity!!).getAllMessageList()!!)
+        checkItemsAvailability()
     }
 
     private fun setRefreshSwipeListener(){
@@ -36,5 +37,11 @@ class SentMessagesListFragment : Fragment() {
         }
     }
 
-
+    private fun checkItemsAvailability(){
+       if(SqlLiteHelper(activity!!).getAllMessageList()!!.isEmpty()){
+           dataBinding.refreshText.visibility = View.VISIBLE
+       } else {
+           dataBinding.refreshText.visibility = View.GONE
+       }
+    }
 }

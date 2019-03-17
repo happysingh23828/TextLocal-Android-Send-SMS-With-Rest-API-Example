@@ -105,7 +105,7 @@ class SendMessageDialogFragment : DialogFragment() {
         messagePostData.message = getString(R.string.your_verification_code) + dataBinding.tvOtp.text
         //TODO test true for testing
         messagePostData.test = false
-        messagePostData.numbers = dataBinding.tvPhone.text.toString().replace("+91-","91")
+        messagePostData.numbers = dataBinding.tvPhone.text.toString()
         viewModel.sendMessage(messagePostData)
     }
 

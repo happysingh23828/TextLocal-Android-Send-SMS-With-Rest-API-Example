@@ -24,6 +24,19 @@
 
             </android.support.v7.widget.RecyclerView>
 
+            <TextView
+                    android:id="@+id/refresh_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pull_from_up_to_refresh"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
         </android.support.constraint.ConstraintLayout>
 
 
