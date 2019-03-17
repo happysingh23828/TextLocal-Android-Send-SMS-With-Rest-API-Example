@@ -16,4 +16,7 @@
     <string name="hi_your_verification_code_is">Hi , Your Verification Code is</string>
     <string name="phone">Phone :</string>
     <string name="otp">OTP :</string>
+    <string name="no_internet">No Internet..</string>
+    <string name="your_verification_code">Hi , Your Verification Code is </string>
+    <string name="text_local_api">F2D8fZin5dY-u098e6sY8KvyzIAGWqIHr5MC6YMMjG</string>
 </resources>

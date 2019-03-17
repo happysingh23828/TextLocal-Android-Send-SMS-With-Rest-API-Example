@@ -13,6 +13,11 @@ android {
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -54,4 +59,18 @@ dependencies {
     implementation 'com.google.dagger:dagger:2.21'
     annotationProcessor "com.google.dagger:dagger-compiler:2.21"
     implementation 'com.google.code.gson:gson:2.8.5'
+
+    //rx java
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.3'
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    //MVVM
+    implementation "android.arch.lifecycle:compiler:1.1.1"
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation "android.arch.lifecycle:viewmodel:1.1.1"
 }
